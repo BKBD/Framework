@@ -1,0 +1,283 @@
+
+html {
+}
+
+
+body {
+    /* Full page site */
+    margin: 0;
+    padding: 0;
+    /* Font */
+    font-family: "Open Sans";
+    /*noinspection CssInvalidPropertyValue*/
+    font-variant: small-bold;
+    display: flex;
+
+    flex-flow: column;
+
+    flex-grow: 1;
+
+    flex-wrap: wrap;
+}
+
+.content {
+    display: inherit;
+
+    flex-flow: inherit;
+
+    flex-grow: inherit;
+
+    flex-wrap: inherit;
+
+    flex-shrink: inherit;
+    height: 100%;
+}
+
+.header {
+    /* Layer - To prevent it from being overriden by other objects */
+    z-index: 10;
+    /* Dimensions */
+    width: 100%;
+    height: 5%;
+    /* Color */
+    background-color: #0fa2fe;
+    /* Flexbox */
+
+    display: flex;
+
+    flex-flow: row;
+
+    align-items: center;
+}
+
+#title-header {
+}
+#info {
+    display: flex;
+}
+
+.hidden {
+    display: none !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+
+#info {
+    /* No reason for events on this */
+    pointer-events: none;
+    /* Color */
+    background-color: lightgray;
+    color: white;
+    /* Font Color */
+    /* Positioning */
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 0;
+    /* Display */
+    display: block;
+    /* Flexbox */
+}
+
+#info-notification {
+    /* No need for people to click on it */
+    pointer-events: none;
+    /* So it doesn't break */
+    position: relative;
+    /* Flexbox */
+    display: flex;
+}
+
+#notification-text {
+    flex-grow: 1;
+}
+
+#close {
+    pointer-events: all;
+    margin-top: 120%;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+#close:hover:before {
+}
+form {
+    overflow: hidden;
+}
+#close:hover:after {
+    display: none;
+    top: -100%;
+    z-index: 0;
+    pointer-events: auto;
+    color: red;
+}
+.title {
+    text-align: center;
+    padding: 12px;
+    margin: 0;
+}
+
+
+.full-width-hr {
+    width: 100%;
+}
+
+.small-line-br {
+    vertical-align: middle;
+    width: 50%;
+}
+
+p {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+
+#setup-form-div {
+    width: 100%;
+    height: 100%;
+    display: block;
+    align-self: center;
+}
+
+#setup-form {
+    width: 50%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    height: 100%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#submit {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    vertical-align: middle;
+    align-self: center;
+    background-color: white;
+    width: 80%;
+    margin-bottom: 5%;
+    border: none;
+    border-bottom: solid lightgray medium;
+    -webkit-transition: border-bottom 0.5s ease-in-out;
+    -moz-transition: border-bottom 0.5s ease-in-out;
+    -ms-transition: border-bottom 0.5s ease-in-out;
+    -o-transition: border-bottom 0.5s ease-in-out;
+    transition: border-bottom 0.5s ease-in-out;
+}
+#setup-form > * {
+    display: block;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    height: 40%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+#submit[type="submit"]:hover {
+    border-bottom: solid darkgray thick;
+}
+.forms-input-fields {
+    /* Preventing webkit from making it look like shit */
+
+    /* Dimensions */
+    /* Text Formatting */
+    /* Flexbox */
+    /* Underline */
+    border: none;
+    border-bottom: solid lightgray medium;
+    /* Appearance */
+    background-color: white;
+    /* Nice transition */
+    width: 80%;
+    height: 40%;
+    transition: all 0.5s ease
+}
+
+.forms-button[type="submit"]:hover {
+    /* Change colour on hover */
+    border-bottom: solid darkgray thick;
+}
+
+.forms-input-fields[type="text"]:focus {
+    border-bottom: solid darkgray thick;
+}
+
+.content {
+    flex-grow: 1;
+    height: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* Signup start */
+
+#sign-up {
+    padding-right: 8px;
+}
+
+#sign-up:hover {
+    color: #fe9b4f;
+}
+
+
+/* Signup end */
+
+/*Colours start */
+
+.c-1-font {
+    color: #cbc7a6;
+}
+
+.c-1 {
+    background-color: #cbc7a6;
+}
+
+
+
+.content {
+    color: #8d8998;
+}
+.c-2-font {
+    color: #8d8998;
+}
+
+.c-2 {
+    background-color: #8d8998;
+}
+
+.m-font {
+    color: #0fa2fe;
+}
+
+.m {
+    background-color: #0fa2fe;
+}
+
+.c {
+    color: #fe9b4f;
+}
+
+.c-3 {
+    background-color: #fe9b4f;
+}
+
+.c {
+    color: #cb5220;
+}
+
+.c-4 {
+    background-color: #cb5220;
+}
+
+
+/*Colours end */

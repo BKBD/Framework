@@ -1,0 +1,84 @@
+// Default Styling
+// Colouring
+$background: #c5f0f1;
+$alerts-background: #e77468;
+$alerts-text: color white;
+$inactive: #2980b9;
+$inactive-underline: darken($alerts-background, 20);
+$active: #3498d8;
+$active-underline: darken($alerts-background, 40);
+$disabled: #2c3e50;
+$hidden: display none;
+// Dimensions
+$def-button-height: 50vh;
+// Mixins
+@mixin flex-full-width {
+  background-color: $inactive;
+  display: flex;
+  flex-flow: row;
+  align-content: center;
+  align-items: center;
+}
+// Buttons
+@mixin material-button {
+  height: $def-button-height;
+  width: 10%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  background-color: $inactive;
+  border: none;
+}
+// NO FUCKING MARGINS
+@mixin no-margins {
+  $margin-default: 0 !default;
+  margin: $margin-default;
+}
+
+@mixin text {
+  font-family: "Open Sans";
+  font-weight: 600;
+  color: black;
+  font-size: xx-large;
+}
+@mixin disable {
+  color: lighten(black, 30);
+  background-color: $disabled;
+}
+// End mixins
+.disabled {
+  @include disable;
+}
+.button {
+  @include material-button;
+}
+menu-bar {
+  @include flex-full-width;
+  width: 100%;
+  height: 10vh;
+}
+menu-bar-item {
+  display: inline-block;
+  flex-grow: 1;
+  border-bottom: $active-underline;
+  padding-bottom: 3px;
+  height: 100%;
+}
+f-text {
+  @include text;
+}
+menu-text, menu-button {
+  @extend f-text;
+  margin-right: 3%;
+  margin-left: 3%;
+  color: white;
+}
+menu-button:hover {
+  background-color: $active;
+}
+body {
+}
+* {
+  @include no-margins;
+}
